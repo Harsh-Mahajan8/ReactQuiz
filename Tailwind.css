@@ -1,0 +1,79 @@
+@import "Tailwindcss";
+
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237616DD'/%3E%3Cstop offset='1' stop-color='%231D0433'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2318E0FF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2318E0FF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  @apply uppercase font-bold tracking-[.51rem] font-sans text-transparent bg-gradient-to-r from-pink-500 to-indigo-900 bg-clip-text;
+}
+
+progress {
+  width: 70%;
+  height: 8px;
+  margin: 10px 0px 0px 0px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+.answered {
+  @apply bg-amber-500;
+}
+
+.correct {
+  @apply bg-green-400;
+}
+
+.incorrect {
+  @apply bg-red-400;
+}
+
+.summary {
+  @apply bg-purple-300 md:w-1/2 mx-auto rounded-xl text-center p-4;
+}
+
+.summary img {
+  @apply w-24 m-3 mx-auto p-4 border-2 border-purple-950 bg-purple-300 rounded-[50%];
+}
+.summary h3 {
+  @apply text-xl md:text-4xl text-purple-950 font-bold;
+}
+
+.quiz {
+  @apply md:w-2/4 md:mx-auto mx-[1rem] bg-linear-to-b from-purple-950 to-indigo-950 p-3 md:px-6 rounded-xl text-center text-[0.8rem] md:text-base;
+}
+
+.quiz h2 {
+  @apply text-indigo-100 my-3 text-[1rem] md:text-[1.15rem];
+}
+
+.summary-stats {
+  @apply flex justify-between mx-[5rem] pb-[4rem] pt-8 border-b-2 border-purple-700 text-purple-800;
+}
+.summary-stats .number {
+  @apply text-xl md:text-6xl text-purple-800;
+}
+.summary-stats .text {
+  @apply uppercase;
+}
+.summary-stats p {
+  @apply flex flex-col;
+}
