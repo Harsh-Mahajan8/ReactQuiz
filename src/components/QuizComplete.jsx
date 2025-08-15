@@ -21,7 +21,7 @@ export default function QuizComplete({ userAnswer }) {
           <span className="text">correctly answered</span>
         </p>
         <p>
-          <span className="number">{wrongAns.length}</span>
+          <span className="number">{wrongAns}</span>
           <span className="text">wrong</span>
         </p>
       </div>
