@@ -7,21 +7,25 @@ export default function QuizComplete({ userAnswer }) {
   const skippedAns = userAnswer.filter((answer) => answer === null);
   const wrongAns = questions.length - (correctAns.length - skippedAns.length);
  
+  const skippedAnsScore = Math.round(skippedAns.length/userAnswer.length)*100;
+  const correctAnsScore = Math.round(correctAns.length/userAnswer.length)*100;
+  const wrongAnsScore = 100- (skippedAnsScore + correctAnsScore);
+
   return (
     <div className="summary">
       <img src={quizCompleteLogo} alt="Quiz completed" />
       <h3>Quiz Completed!</h3>
       <div className="summary-stats">
         <p>
-          <span className="number text-6xl">{skippedAns.length}</span>
+          <span className="number text-6xl">{skippedAnsScore}%</span>
           <span className="text">Skipped</span>
         </p>
         <p>
-          <span className="number">{correctAns.length}</span>
+          <span className="number">{correctAnsScore}%</span>
           <span className="text">correctly answered</span>
         </p>
         <p>
-          <span className="number">{wrongAns}</span>
+          <span className="number">{wrongAnsScore}%</span>
           <span className="text">wrong</span>
         </p>
       </div>
